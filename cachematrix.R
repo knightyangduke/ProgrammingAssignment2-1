@@ -25,6 +25,7 @@ makeCacheMatrix <- function(x = numeric(),row= 1,column=1) {
 ##cacheSolve get the inverse of Special Matrix x, defined by makeCacheMatrix function
 ##if there is already a calculated inverse, then return it,otherwise calculate the inverse matrix
 cacheSolve <- function(x, ...) {
+        library('MASS')
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
